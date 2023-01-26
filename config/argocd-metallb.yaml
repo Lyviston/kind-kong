@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://raw.githubusercontent.com/bitnami/charts/main/bitnami/metallb
-    targetRevision: "0.13.7"
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: "*"
     chart: metallb
     helm:
       values: |
