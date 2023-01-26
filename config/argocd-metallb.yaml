@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: "*"
+    targetRevision: "release"
     chart: metallb
     helm:
       values: |
@@ -20,9 +20,12 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
+  revisionHistoryLimit: 3
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
+      - PruneLast=true
+      - ApplyOutOfSyncOnly=tru
     automated:
       prune: true
       allowEmpty: true
