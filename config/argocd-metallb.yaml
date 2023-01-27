@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: "*"
+    targetRevision: "v0.13.7"
     chart: metallb
     helm:
       values: |
@@ -16,7 +16,7 @@ spec:
             - name: default
               protocol: layer2
               addresses:
-                - 172.21.0.2-172.21.0.5
+                - 172.21.0.2-172.21.0.50
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
